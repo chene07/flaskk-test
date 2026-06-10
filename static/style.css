@@ -7,18 +7,21 @@ h2 {
     color: limegreen !important;
     font-size: 48px !important;
     text-decoration: underline !important;
+    text-align: center;
 }
 
 form {
     border: 5px solid yellow !important;
     background-color: purple !important;
     padding: 30px !important;
+    
 }
 
 input {
     background-color: orange !important;
     border: 3px solid red !important;
     font-size: 20px !important;
+    
 }
 
 button {
@@ -26,4 +29,5 @@ button {
     color: black !important;
     font-size: 24px !important;
     font-weight: bold !important;
+    
 }

@@ -4,17 +4,18 @@ from datetime import datetime
 app = Flask(__name__)
 
 @app.route("/")
-def home():
-    return "Hello, Flask!"
+def index():
+    print("Index route was called!")  # Add this line
+    return render_template("index.html")
 
-@app.route("/hello/")
-@app.route("/hello/<name>")
-def hello_there(name=None):
-    return render_template(
-        "hello_there.html",
-        name=name,
-        date=datetime.now()
-    )
+# @app.route("/hello/")
+# @app.route("/hello/<name>")
+# def hello_there(name=None):
+#     return render_template(
+#         "hello_there.html",
+#         name=name,
+#         date=datetime.now()
+#     )
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -31,7 +32,5 @@ def login():
 
     return render_template("login.html", msg=msg)
 
-@app.route("/test-template")
-def test_template():
-    return render_template("login.html")  # Try to load just the template
+
 
